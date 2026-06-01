@@ -6,7 +6,7 @@ public class BirdScript : MonoBehaviour
     public Rigidbody2D My_Rigidbody;
     public float flapStrength;
     public LogicManager logic;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("logic").GetComponent<LogicManager>();

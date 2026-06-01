@@ -254,6 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   My_Rigidbody: {fileID: 105898901}
   flapStrength: 9
+  logic: {fileID: 0}
 --- !u!58 &105898903
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -321,6 +322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   playerScore: 0
   scoreText: {fileID: 1920931902}
+  gameOverScreen: {fileID: 441019080}
 --- !u!4 &441019082
 Transform:
   m_ObjectHideFlags: 0
@@ -708,7 +710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1075310477
 RectTransform:
   m_ObjectHideFlags: 0
@@ -994,7 +996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000015259}
+  m_AnchoredPosition: {x: 0, y: 0.000015258789}
   m_SizeDelta: {x: 140.9668, y: 164.4614}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1589254527
@@ -1121,7 +1123,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1616189282}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 441019081}
+        m_TargetAssemblyTypeName: LogicManager, Assembly-CSharp
+        m_MethodName: restartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1616189282
 MonoBehaviour:
   m_ObjectHideFlags: 0
