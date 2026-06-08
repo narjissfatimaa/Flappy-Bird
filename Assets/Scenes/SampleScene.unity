@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 105898903}
   - component: {fileID: 105898902}
   - component: {fileID: 105898904}
+  - component: {fileID: 105898905}
   m_Layer: 3
   m_Name: Flappy bird
   m_TagString: Untagged
@@ -258,6 +259,8 @@ MonoBehaviour:
   logic: {fileID: 0}
   birdIsAlive: 1
   GameManager: {fileID: 1115944575}
+  jumpSound: {fileID: 8300000, guid: 5139e1ffe63c9064dbd30e3c414439ae, type: 3}
+  collideSound: {fileID: 0}
 --- !u!58 &105898903
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -305,9 +308,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 5139e1ffe63c9064dbd30e3c414439ae, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.235
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -391,6 +394,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!81 &105898905
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105898898}
+  m_Enabled: 1
 --- !u!1 &441019080
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +475,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,6 +715,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4820245963479091405, guid: a964d2fa1c2fb6748ad8c945c34c23ba, type: 3}
       propertyPath: m_Name
+      value: Pipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820245963479091405, guid: a964d2fa1c2fb6748ad8c945c34c23ba, type: 3}
+      propertyPath: m_TagString
       value: Pipe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1126,7 +1141,7 @@ GameObject:
   - component: {fileID: 1358350431}
   m_Layer: 0
   m_Name: Pipe spawner
-  m_TagString: Untagged
+  m_TagString: Pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -3,6 +3,7 @@ using UnityEngine;
 public class PipemiddleScript : MonoBehaviour
 {
     public LogicManager logic;
+    public BirdScript birdScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
