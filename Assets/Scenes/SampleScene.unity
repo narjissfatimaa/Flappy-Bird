@@ -260,7 +260,7 @@ MonoBehaviour:
   birdIsAlive: 1
   GameManager: {fileID: 1115944575}
   jumpSound: {fileID: 8300000, guid: 5139e1ffe63c9064dbd30e3c414439ae, type: 3}
-  collideSound: {fileID: 0}
+  collideSound: {fileID: 8300000, guid: a23fd94cfcd34ca41a93b16baf17f620, type: 3}
 --- !u!58 &105898903
 CircleCollider2D:
   m_ObjectHideFlags: 0
