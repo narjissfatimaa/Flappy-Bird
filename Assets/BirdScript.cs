@@ -12,6 +12,7 @@ public class BirdScript : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip collideSound;
     private AudioSource audioSource;
+    public pipespwanerscript PipeScript;
    
 
     void Start()
@@ -45,15 +46,16 @@ public class BirdScript : MonoBehaviour
     {
         audioSource.PlayOneShot(collideSound);
     }
-    public void onCollisionEnter2D( Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Pipe"))
+        private void OnTriggerEnter2D( Collision2D collision)
         {
-            collidePipeSound();
-            logic.gameOver();
-            birdIsAlive = false;
+            if (collision.gameObject.CompareTag("Pipe"))
+            {
+                Debug.Log("Hit pIpe");
+            
+                logic.gameOver();
+                birdIsAlive = false;
+            }
         }
-    }
     public void playJumpSound()
     {
         audioSource.PlayOneShot(jumpSound);

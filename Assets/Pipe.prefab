@@ -416,3 +416,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 021b1866c1c2d2a489026cdc4c189bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  logic: {fileID: 0}
+  birdScript: {fileID: 0}

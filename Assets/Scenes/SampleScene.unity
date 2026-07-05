@@ -129,11 +129,11 @@ GameObject:
   m_Component:
   - component: {fileID: 105898899}
   - component: {fileID: 105898900}
-  - component: {fileID: 105898901}
   - component: {fileID: 105898903}
   - component: {fileID: 105898902}
   - component: {fileID: 105898904}
   - component: {fileID: 105898905}
+  - component: {fileID: 105898906}
   m_Layer: 3
   m_Name: Flappy bird
   m_TagString: Untagged
@@ -215,33 +215,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!50 &105898901
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105898898}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &105898902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,13 +227,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8d8400f82624744adf837d7c7ed33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  My_Rigidbody: {fileID: 105898901}
+  My_Rigidbody: {fileID: 0}
   flapStrength: 9
-  logic: {fileID: 0}
+  logic: {fileID: 441019081}
   birdIsAlive: 1
   GameManager: {fileID: 1115944575}
   jumpSound: {fileID: 8300000, guid: 5139e1ffe63c9064dbd30e3c414439ae, type: 3}
   collideSound: {fileID: 8300000, guid: a23fd94cfcd34ca41a93b16baf17f620, type: 3}
+  PipeScript: {fileID: 1358350431}
 --- !u!58 &105898903
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -402,6 +376,33 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105898898}
   m_Enabled: 1
+--- !u!50 &105898906
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105898898}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &441019080
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +674,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2569860235433350319, guid: a964d2fa1c2fb6748ad8c945c34c23ba, type: 3}
+      propertyPath: m_TagString
+      value: Pipe
+      objectReference: {fileID: 0}
     - target: {fileID: 4635217381112194993, guid: a964d2fa1c2fb6748ad8c945c34c23ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 879.44135
@@ -718,6 +723,10 @@ PrefabInstance:
       value: Pipe
       objectReference: {fileID: 0}
     - target: {fileID: 4820245963479091405, guid: a964d2fa1c2fb6748ad8c945c34c23ba, type: 3}
+      propertyPath: m_TagString
+      value: Pipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673837251970689626, guid: a964d2fa1c2fb6748ad8c945c34c23ba, type: 3}
       propertyPath: m_TagString
       value: Pipe
       objectReference: {fileID: 0}

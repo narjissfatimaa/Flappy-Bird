@@ -15,8 +15,8 @@ public class PipemiddleScript : MonoBehaviour
     {
         
     }
-    public void OnTriggerEnter2D(Collider2D collision)
-    { if (collision.gameObject.layer == 3)
+    public void OnTriggerEnter2D(Collider2D collision1)
+    { if (collision1.gameObject.layer == 3)
         {
             logic.addScore(1);
         }
